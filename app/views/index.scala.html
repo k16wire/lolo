@@ -1,7 +1,74 @@
 @(message: String)
 
 @main("Welcome to Play") {
-
-    @play20.welcome(message, style = "Java")
-
+<div class="row">
+    <div class="medium-12 columns">
+        <h2>API Help</h2>
+        <p>LOLO provides remote access API.
+        <ul>
+            <li>REST-like style.
+            <li>JSON support.
+        </ul>
+        API url is available under the ".../api/"
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="medium-12 columns">
+        <h4>app</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="medium-1 columns">
+        <span class="radius label">POST</span>
+    </div>
+    <div class="medium-3 column">
+        /api/app/
+    </div>
+    <div class="medium-6 column">
+        Install a new web service
+        <textarea>{"name":"Pragmatic Story","owner":"scott@@gmail.com","serviceType","wordpress"}
+        </textarea>
+    </div>
+    <div class="medium-2 column"><a class="tiny radius button secondary"
+        href="@controllers.routes.WebserviceApp.newWebservice()">Test</a></div>
+</div>
+<div class="row">
+    <div class="medium-1 columns">
+        <span class="success radius label">GET</span>
+    </div>
+    <div class="medium-3 column">
+        /api/app/{appId}
+    </div>
+    <div class="medium-6 column">
+        Find webservice by ID<br>
+        Parameters
+        <textarea>{"appId": 1}
+        </textarea>
+        Response
+        <textarea>{"id": 1,"name":"Pragmatic Story"}
+        </textarea>
+    </div>
+    <div class="medium-2 column"><a class="tiny radius button secondary"
+                                    href="@controllers.routes.WebserviceApp.newWebservice()">Test</a></div>
+</div>
+<div class="row">
+    <div class="medium-1 columns">
+        <span class="success radius label">GET</span>
+    </div>
+    <div class="medium-3 column">
+        /api/app/findByOwner
+    </div>
+    <div class="medium-6 column">
+        Find webservice by Owner<br>
+        Parameters
+        <textarea>{"owner":"scott@@gmail.com"}
+        </textarea>
+        Response
+        <textarea>[{"appId": 1},{"appId": 2}]
+        </textarea>
+    </div>
+    <div class="medium-2 column"><a class="tiny radius button secondary"
+                                    href="@controllers.routes.WebserviceApp.newWebservice()">Test</a></div>
+</div>
 }
