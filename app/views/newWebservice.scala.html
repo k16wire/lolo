@@ -1,15 +1,17 @@
-@(webserviceForm:Form[Webservice])
+@(webserviceForm:Form[Webapp])
 
 @import helper._
 
 @main("New Webservice") {
 <div class="medium-12 columns">
-    @form(action=controllers.routes.WebserviceApp.newWebservice()){
+    @form(action=controllers.routes.ApiApp.newWebapp()){
         @inputText(webserviceForm("name"))
-        @inputText(webserviceForm("owner"))
+        @inputText(webserviceForm("type"))
+        @inputText(webserviceForm("key"))
+        @inputText(webserviceForm("token"))
 
         <div class="text-right">
-            <input type="submit" class="small radius button" value="Create New Webservice">
+            <input type="submit" class="small radius button" value="Create New Webapp">
         </div>
     }
 </div>

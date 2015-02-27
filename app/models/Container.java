@@ -28,5 +28,5 @@ public class Container extends Model{
     public List<ImageContainer> imageContainerList;
 
     @OneToMany(mappedBy = "container", cascade = CascadeType.ALL)
-    public List<WebserviceContainer> webserviceContainerList;
+    public List<WebappContainer> webserviceContainerList;
 }

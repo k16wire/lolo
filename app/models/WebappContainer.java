@@ -12,12 +12,12 @@ import javax.persistence.ManyToOne;
  * Time: 오전 12:31
  */
 @Entity
-public class WebserviceContainer extends Model{
+public class WebappContainer extends Model{
     @Id
     public Long id;
 
     @ManyToOne
-    public Webservice webservice;
+    public Webapp webapp;
     @ManyToOne
     public Container container;
 }

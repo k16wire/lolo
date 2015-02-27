@@ -23,15 +23,15 @@
         <span class="radius label">POST</span>
     </div>
     <div class="medium-3 column">
-        /api/app/
+        /api/webapp/
     </div>
     <div class="medium-6 column">
-        Install a new web service
-        <textarea>{"name":"Pragmatic Story","owner":"scott@@gmail.com","serviceType","wordpress"}
+        Install a new webapp
+        <textarea>{"name":"Pragmatic Story", "type":"wordpress", "key":"k16wire", "token":"scott@@gmail.com" }
         </textarea>
     </div>
     <div class="medium-2 column"><a class="tiny radius button secondary"
-        href="@controllers.routes.WebserviceApp.newWebservice()">Test</a></div>
+        href="@controllers.routes.Application.newWebappForm()">Test</a></div>
 </div>
 <div class="row">
     <div class="medium-1 columns">
@@ -50,7 +50,7 @@
         </textarea>
     </div>
     <div class="medium-2 column"><a class="tiny radius button secondary"
-                                    href="@controllers.routes.WebserviceApp.newWebservice()">Test</a></div>
+                                    href="">Test</a></div>
 </div>
 <div class="row">
     <div class="medium-1 columns">
@@ -69,6 +69,6 @@
         </textarea>
     </div>
     <div class="medium-2 column"><a class="tiny radius button secondary"
-                                    href="@controllers.routes.WebserviceApp.newWebservice()">Test</a></div>
+                                    href="">Test</a></div>
 </div>
 }
